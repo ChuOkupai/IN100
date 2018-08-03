@@ -8,15 +8,9 @@ int main()
 	init_graphics(640, 480);
 	p = wait_clic();
 	if (p.x % 2)
-		if (p.y % 2)
-			c = green;
-		else
-			c = bleu;
+		c = (p.y % 2) ? green : bleu;
 	else
-		if (p.y % 2)
-			c = yellow;
-		else
-			c = red;
+		c = (p.y % 2) ? yellow : red;
 	draw_circle(p, 25, c);
 	wait_escape();
 	return 0;
